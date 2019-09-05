@@ -21,4 +21,9 @@ public class AsyncController {
         asyncService.doService();
         logger.info("调用方法结束");
     }
+
+    @GetMapping("/task")
+    public String task() {
+        return asyncService.getTask();
+    }
 }

@@ -8,8 +8,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import java.util.Arrays;
-
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class RedisTest {
@@ -19,9 +17,11 @@ public class RedisTest {
 
     @Test
     public void test() {
-//        redisUtil.set("abc", new Animal(1,"cat"));
-        redisUtil.set(1,null);
-//        redisUtil.del("abc");
+//        redisUtil.set("animal",new Animal(1,"dog"));
+//        System.out.println(redisUtil.get("animal"));
+//        redisUtil.del("animal");
+        System.out.println(redisUtil.get("task"));
+        System.out.println(redisUtil.get("task") == null);
     }
 
 }
